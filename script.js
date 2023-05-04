@@ -9,6 +9,14 @@ document.getElementById('startTimer').addEventListener('click', ()=>{
     int = setInterval(displayTimer,10);
 });
 
+document.getElementById('lapTimer').addEventListener('click', () => {
+    timerText = document.querySelector('.timerDisplay').textContent
+    lapDiv = document.createElement('div')
+    lapDiv.setAttribute('class', 'timerDisplay lapDisplay')
+    lapDiv.textContent = timerText
+    document.querySelector('.lapDisplay').append(lapDiv)
+})
+
 document.getElementById('pauseTimer').addEventListener('click', ()=>{
     clearInterval(int)
 });
@@ -17,6 +25,7 @@ document.getElementById('resetTimer').addEventListener('click', ()=>{
     clearInterval(int);
     [milliseconds,seconds,minutes,hours] = [0,0,0,0]
     timerRef.innerHTML = '00 : 00 : 00 : 000 '
+    document.querySelector('.lapDisplay').innerHTML = ''
 });
 
 function displayTimer() {

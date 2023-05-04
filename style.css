@@ -39,6 +39,10 @@ body {
     box-shadow: 0 0 20px rgba(0,139,253,0.25);
 }
 
+.lapDisplay {
+  color: #d23332;
+}
+
 .buttons {
     width: 90%;
     margin: 60px auto 0 auto;
